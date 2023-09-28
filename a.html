@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>심리 테스트</title>
+    <style type="text/css">
+        html {
+            background: url("https://media.giphy.com/media/l0MYuneqBUC5kiLUA/giphy.mp4") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #k { position: absolute; z-index: -1; }
+
+        section { width: 50vw; height: 20vw; background: black; margin: auto; margin-top: 300px; border-radius: 2vw; position: relative; z-index: 1; padding: 50px;}
+        h1 { text-align: center; font-size: 1.5rem; color: white;}
+        h2 {color: white;}
+        .question { margin-top: 120px; text-align: center; font-size: 1.5rem; color: white; } 
+        input[type="radio"] { width: 20px; height: 20px; }
+        .submit { margin: auto; display: block; margin-top: 100px; padding: 5px 10px; font-size: 1.5rem; font-weight: bold; color: blue; border-radius: 5px; border: none; }
+      button {color: #0489B1; background-color: white; border: 0; border-radius: 50px; }
+  button:hover{color: white; background-color: #81DAF5;}
+
+   a { text-decoration: none; color: black;}
+    a:visited { text-decoration: none; }
+    a:focus { text-decoration: none; }
+
+    </style>
+</head>
+<body>
+    <img src="https://media.giphy.com/media/l0MYuneqBUC5kiLUA/giphy.mp4" id="k">
+    <script type="text/javascript">
+    let x = 0;
+    let y = 0;
+    let manyDog = setInterval(makeDog, 1000);
+
+    function makeDog() {
+        let d = document.getElementById("k");
+        let a = d.cloneNode(true);
+
+        x = Math.random() * (window.innerWidth - 250);
+        y = Math.random() * (window.innerHeight - 287);
+
+        a.style.left = x + "px";
+        a.style.top = y + "px";
+        a.style.zIndex = -1;
+        document.body.appendChild(a);
+    }
+    </script>
+
+    <section>
+        <h1>테스트 결과</h1>
+        <div class="question">
+            <h2>당신은 싸이코패스입니다.</h2>
+        </div>
+    </section>
+</body>
+</html>
